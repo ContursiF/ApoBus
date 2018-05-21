@@ -7,14 +7,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context=".BusStopListActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/send_bus_stop_back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="98dp" />
-
+        android:onClick="sendBusStopBack"
+        android:text="@string/send_bus_stop_back_button"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+    >
 
 </android.support.constraint.ConstraintLayout>

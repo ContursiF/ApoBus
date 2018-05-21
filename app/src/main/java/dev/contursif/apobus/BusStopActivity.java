@@ -17,15 +17,25 @@ public class BusStopActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bus_stop);
         final Intent srcIntent = getIntent();
         if (srcIntent != null){
-            final String id = srcIntent.getStringExtra("id");
+           /* final String id = srcIntent.getStringExtra("id");
             final String name = srcIntent.getStringExtra("name");
             final String direction = srcIntent.getStringExtra("direction");
             final float latitude = srcIntent.getFloatExtra("latitude", 0.0f);
             final float longitude = srcIntent.getFloatExtra("longitude", 0.0f);
+            */
+           /* final String id = srcIntent.getStringExtra(BusStop.Keys.ID);
+            final String name = srcIntent.getStringExtra(BusStop.Keys.NAME);
+            final String direction = srcIntent.getStringExtra(BusStop.Keys.DIRECTION);
+            final float latitude = srcIntent.getFloatExtra(BusStop.Keys.LATITUDE, 0.0f);
+            final float longitude = srcIntent.getFloatExtra(BusStop.Keys.LONGITUDE, 0.0f);
             final BusStop busStop = BusStop.Builder.create(id,name)
                     .withDirection(direction)
                     .withLocation(latitude,longitude)
-                    .build();
+                    .build();*/
+            /*
+            final BusStop busStop = (BusStop) srcIntent.getSerializableExtra(BusStop.Keys.ID);
+            */
+            final BusStop busStop = (BusStop) srcIntent.getParcelableExtra(BusStop.Keys.ID);
             Log.d(TAG,"Received: "+ busStop);
         }
     }
